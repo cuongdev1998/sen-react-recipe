@@ -1,0 +1,34 @@
+@import "../../../../scss/variables.scss";
+$size: 250px;
+.sidebar__about {
+  padding: 3rem;
+  margin-bottom: 4rem;
+  min-height: 600px;
+  background-color: #fff;
+
+  @include flex(column, flex-start, center);
+  h3 {
+    @include decorH3();
+    font-size: 2rem;
+  }
+  &--avt {
+    width: $size;
+    height: $size;
+    margin-bottom: 4rem;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  &--name {
+    font-size: 3.5rem;
+    font-family: "Kalam", cursive;
+  }
+  &--intro {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: auto;
+  }
+}

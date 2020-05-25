@@ -1,0 +1,36 @@
+@import "../../scss/variables.scss";
+
+.btn-arrow-up {
+  position: fixed;
+  background-color: rgba($color: $redColor, $alpha: 0.7);
+  width: 40px;
+  height: 40px;
+  right: 3rem;
+  bottom: 3rem;
+  cursor: pointer;
+  transition: all 0.4s linear;
+  z-index: 18;
+
+  &:hover {
+    background-color: rgba($color: $redColor, $alpha: 1);
+  }
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    color: #fff;
+    font-size: 2rem;
+  }
+}
+
+@keyframes buttonUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

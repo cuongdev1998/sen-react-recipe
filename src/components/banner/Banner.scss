@@ -1,0 +1,176 @@
+@import "../../scss/variables.scss";
+.banner {
+  width: 1200px;
+  height: 500px;
+  margin: auto;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+
+  padding: 3rem;
+  .slick-slider {
+    height: 100%;
+    .slick-prev,
+    .slick-next {
+      z-index: 1;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+    }
+    .slick-prev {
+      left: 2%;
+      top: 50%;
+      // background-color: #fff;
+
+      transform: translate(-2%, -50%) rotate(-90deg);
+      &:hover::before {
+        background-color: $redColor;
+        color: #fff;
+        transition: all 0.5s ease;
+      }
+      &:before {
+        position: absolute;
+        content: "\2191";
+        top: 0;
+        left: 0;
+        font-size: 4rem;
+        color: $redColor;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .slick-next {
+      right: 2%;
+      top: 50%;
+      background-color: #fff;
+
+      transform: translate(2%, -50%) rotate(90deg);
+      &:hover::before {
+        background-color: $redColor;
+        color: #fff;
+        transition: all 0.5s ease;
+      }
+      &:before {
+        position: absolute;
+        content: "\2191";
+        top: 0;
+        left: 0;
+        font-size: 4rem;
+        color: $redColor;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .slick-list {
+      height: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .slick-track {
+        height: 100%;
+        .slick-slide {
+          position: relative;
+          height: 100%;
+          div {
+            height: 100%;
+            img {
+              height: 100%;
+            }
+          }
+          .slide--items {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: #fff;
+            height: 50%;
+            width: 60%;
+            @include flex(column, flex-start, center);
+            padding: 2rem;
+            font-size: 1.6rem;
+            .items-category {
+              text-transform: uppercase;
+              color: $redColor;
+              margin-bottom: 2rem;
+            }
+            .items-name {
+              text-transform: capitalize;
+              font-size: 2.5rem;
+              font-weight: bold;
+              margin-bottom: 2rem;
+            }
+            .items-description {
+              text-align: center;
+              font-size: 1.5rem;
+            }
+            .items-detail {
+              margin-top: auto;
+              @include flex(row, space-around, center);
+              a {
+                text-decoration: none;
+                color: rgba($color: #000000, $alpha: 0.6);
+                i {
+                  margin: 0 1rem;
+                  color: $redColor;
+                }
+                &:hover {
+                  color: $redColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .banner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .banner {
+    height: 400px;
+
+    .slick-slider {
+      .slick-list {
+        .slick-track {
+          .slick-slide {
+            .slide--items {
+              height: 70%;
+
+              .items-category {
+              }
+              .items-name {
+                font-size: 2rem;
+
+                margin-bottom: 2rem;
+              }
+              .items-description {
+                text-align: center;
+                font-size: 1.3rem;
+              }
+              .items-detail {
+                a {
+                  font-size: 1.4rem;
+                  i {
+                    margin: 0 0.5rem;
+                    color: $redColor;
+                  }
+                  &:hover {
+                    color: $redColor;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import "../../scss/variables.scss";
+
+.recipe__list {
+  width: $widthPrimary;
+  margin: auto;
+
+  @include flex(row, space-between, stretch);
+  flex-wrap: wrap;
+
+  margin-top: 5rem;
+
+  &--item {
+    width: calc(33% - 15px);
+    min-height: 500px;
+    margin-bottom: 4rem;
+    padding: 0;
+    background-color: rgba(202, 202, 202, 0.2);
+    opacity: 0;
+    &:hover img {
+      transform: scale(1.15) rotate(4deg);
+    }
+    @include flex(column, flex-start, center);
+    &--img {
+      height: 300px;
+      width: 100%;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+      img {
+        @include img();
+        transition: all 0.4s ease-in-out;
+      }
+    }
+    &--category {
+      @include category();
+      font-size: 2rem;
+      padding: 2rem;
+    }
+    &--name {
+      @include name();
+      padding: 2rem;
+      margin-bottom: auto;
+    }
+    &--description {
+      @include description();
+      padding: 2rem;
+      margin-top: auto;
+    }
+    &--detail {
+      @include detail();
+      padding: 2rem;
+    }
+  }
+}
+
+@keyframes fadeBox {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .recipe__list {
+    width: 100%;
+    &--item {
+      &--detail {
+        @include detail();
+        padding: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .recipe__list {
+    padding: 0 2rem;
+    &--item {
+      width: calc(50% - 15px);
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .recipe__list {
+    &--item {
+      width: 100%;
+    }
+  }
+}

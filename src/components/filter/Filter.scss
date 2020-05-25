@@ -1,0 +1,34 @@
+@import "../../scss/variables.scss";
+
+.filter {
+  width: $widthPrimary;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+  margin-top: 50px;
+  input {
+    flex: 1;
+    outline: none;
+    font-size: 1.6rem;
+    height: 6rem;
+    padding: 1rem;
+    border: 1px solid #aaaaaa;
+  }
+  button {
+    height: 6rem;
+    width: 6rem;
+    outline: none;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 3rem;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .filter {
+    width: 100%;
+  }
+}

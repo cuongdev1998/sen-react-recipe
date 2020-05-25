@@ -1,0 +1,29 @@
+@import "../../../scss/variables.scss";
+.footer__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.4s ease;
+  &:hover {
+    color: $redColor;
+    text-decoration: none;
+  }
+  i {
+    font-size: 4rem;
+    margin-right: 2rem;
+  }
+  p {
+    font-family: "Kalam", cursive;
+    font-size: 3rem;
+    line-height: 2.2rem;
+    span {
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 1rem;
+    }
+  }
+}

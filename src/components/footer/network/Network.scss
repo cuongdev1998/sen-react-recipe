@@ -1,0 +1,47 @@
+@import "../../../scss/variables.scss";
+.footer__network {
+  display: flex;
+
+  list-style: none;
+  font-size: 1.6rem;
+
+  &--item {
+    text-transform: uppercase;
+    margin: 3rem;
+    a {
+      text-decoration: none;
+      color: rgba($color: #989898, $alpha: 1);
+      font-size: 1.6rem;
+      transition: all 0.4s ease;
+      font-weight: 500;
+      &:hover {
+        text-decoration: none;
+        color: rgba($color: $redColor, $alpha: 1);
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .footer__network {
+    font-size: 1.6rem;
+    &--item {
+      margin: 0.7rem;
+      a {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .footer__network {
+    font-size: 1.4rem;
+    &--item {
+      margin: 1rem;
+      a {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+  }
+}

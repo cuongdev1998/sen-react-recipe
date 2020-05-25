@@ -1,0 +1,127 @@
+@import "../../scss/variables.scss";
+.topbar {
+  width: 100vw;
+  height: 10vh;
+  background-color: white;
+  padding: 1rem;
+  font-size: 1.6rem;
+  position: fixed;
+  z-index: 10;
+  margin-bottom: 80vh;
+  display: flex;
+  align-items: center;
+}
+.navbar {
+  width: $widthPrimary;
+  margin: auto;
+
+  background-color: white;
+
+  @include flex(row, space-between, center);
+  &__link {
+    width: 50%;
+    @include flex(row, space-between, stretch);
+    font-weight: bold;
+    list-style: none;
+
+    &--item {
+      color: #000;
+      text-transform: capitalize;
+    }
+  }
+  &__login {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .burger {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 850px) {
+  .navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    &__link {
+      position: fixed;
+      @include flex(column, flex-start, center);
+      top: 10vh;
+      right: 0;
+      width: 50%;
+      height: 100vh;
+      background-color: rgba($color: #000000, $alpha: 0.9);
+      z-index: 19;
+
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      &--item {
+        color: #fff;
+        opacity: 0;
+        margin: 3rem auto;
+        transition: all 0.3s linear;
+        &:hover {
+          color: $redColor;
+        }
+      }
+    }
+    &__login {
+      justify-content: flex-start;
+    }
+
+    .burger {
+      display: block;
+      transition: all 0.4s ease;
+      div {
+        width: 3rem;
+        height: 3px;
+        margin-bottom: 4px;
+        background-color: $redColor;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        &:nth-child(2) {
+          width: 2.3rem;
+        }
+        &:nth-child(3) {
+          width: 2.7rem;
+        }
+      }
+    }
+  }
+}
+.navbar--appear {
+  transform: translateX(0%);
+}
+.toggleBurger {
+  div {
+    cursor: pointer;
+    &:first-child {
+      transform: rotate(-45deg) translate(-8.5px, 6px);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      opacity: 0;
+    }
+    &:last-child {
+      transform: rotate(45deg) translate(-8.5px, -6px);
+    }
+  }
+}
+@keyframes animationItemsNavbar {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

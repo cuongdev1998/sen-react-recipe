@@ -1,0 +1,122 @@
+@import "../../../scss/variables.scss";
+
+.list__food {
+  @include flex(row, space-between, stretch);
+  width: $widthPrimary;
+  margin: 4rem auto;
+  min-height: 400px;
+
+  &--items {
+    width: calc(33.3% - 30px);
+    height: 50rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+
+    padding: 3rem;
+    @include flex(column, flex-start, center);
+
+    &::before {
+      content: "";
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #ffffff, $alpha: 0.9);
+      transform: rotate(-3deg);
+      z-index: -1;
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover::before {
+      transform: rotate(3deg);
+    }
+
+    &--image {
+      width: 100%;
+      height: 60%;
+      margin-bottom: 2rem;
+      position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &:hover img::before {
+    }
+    &--category {
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $redColor;
+      margin-bottom: 2rem;
+    }
+    &--name {
+      font-size: 2.2rem;
+      text-transform: capitalize;
+      text-align: center;
+      font-family: "Kalam", cursive;
+    }
+    &--detail {
+      margin-top: auto;
+      font-size: 1.6rem;
+      font-family: "Poppins", sans-serif;
+      @include flex(row, space-around, center);
+      a {
+        text-decoration: none;
+        color: rgba($color: #000000, $alpha: 0.6);
+        i {
+          margin: 0 1rem;
+          color: $redColor;
+        }
+        &:hover {
+          color: $redColor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .list__food {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .list__food {
+    &--items {
+      width: calc(50% - 15px);
+    }
+    &--items:last-child {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .list__food {
+    &--items {
+      &--detail {
+        font-size: 1.2rem;
+        a {
+          margin-right: 0;
+          i {
+            margin-right: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .list__food {
+    &--items {
+      width: 100%;
+    }
+    &--items:nth-child(2) {
+      display: none;
+    }
+  }
+}

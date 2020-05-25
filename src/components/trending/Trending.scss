@@ -1,0 +1,18 @@
+@import "../../scss/variables.scss";
+
+.grid {
+  width: $widthPrimary;
+  margin: 0 auto;
+  @include flex(row, space-between, stretch);
+}
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .grid {
+    display: block;
+  }
+}

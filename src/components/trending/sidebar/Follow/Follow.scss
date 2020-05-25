@@ -1,0 +1,43 @@
+@import "../../../../scss/variables.scss";
+
+.sidebar__follow {
+    padding: 3rem;
+    margin-bottom: 4rem;
+    min-height: 300px;
+    background-color: #fff;
+
+    h3 {
+        @include decorH3();
+        font-size: 2.5rem;
+    }
+
+    &--network {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.5rem;
+        grid-template-rows: 45px 45px 45px;
+
+        button {
+            border: none;
+            outline: none;
+            color: rgba($color: #000000, $alpha: 0.7);
+
+            font-size: 1.4rem;
+
+            border-radius: 3px;
+            text-transform: uppercase;
+            transition: all 0.4s linear;
+            i {
+                margin-right: 1rem;
+                font-size: 1.6rem;
+            }
+            &:hover {
+                background-color: $redColor;
+                color: #fff;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

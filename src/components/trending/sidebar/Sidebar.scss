@@ -1,0 +1,10 @@
+@import "../../../scss/variables.scss";
+
+.sidebar {
+  width: 31%;
+}
+@media screen and (max-width: 1100px) {
+  .sidebar {
+    width: 100%;
+  }
+}

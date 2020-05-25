@@ -1,0 +1,33 @@
+@import "../../../scss/variables.scss";
+.article {
+  width: 65%;
+  &__main {
+    min-height: 600px;
+    padding: 3rem;
+    @include wrapper();
+    h3 {
+      align-self: flex-start;
+      @include decorH3();
+    }
+    &--img {
+      @include img();
+    }
+    &--category {
+      @include category();
+    }
+    &--name {
+      @include name();
+    }
+    &--description {
+      @include description();
+    }
+    &--detail {
+      @include detail();
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .article {
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../../scss/variables.scss";
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  padding: 0.5rem 0;
+  &:hover {
+    color: $redColor;
+    text-decoration: none;
+  }
+  color: #fff;
+  i {
+    font-size: 4rem;
+    margin-right: 2rem;
+  }
+  p {
+    font-family: "Kalam", cursive;
+    font-size: 3rem;
+    line-height: 2.2rem;
+    span {
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 1rem;
+    }
+  }
+}
