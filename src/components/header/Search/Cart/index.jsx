@@ -37,9 +37,16 @@ function Cart(props) {
     newInfo.splice(index, 1);
     setInfoCart(newInfo);
   }
+
+  function closeCart() {
+    const cart = document.querySelector(".cart");
+    cart.style.transform =
+      "perspective(1000px) rotateX(-30deg) rotateY(0deg) rotateZ(0)";
+    cart.style.opacity = "0";
+  }
   return (
     <div className="header__cart">
-      <div className="cart">
+      <div className="cart" onMouseLeave={closeCart}>
         <div className="cart__list">
           {infoCart.map((item) => (
             <div className="cart__item" key={item.id}>

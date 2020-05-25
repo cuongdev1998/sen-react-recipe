@@ -8,8 +8,12 @@ function Search(props) {
   }
   function handleCart() {
     const cart = document.querySelector(".cart");
+
     cart.style.transform = "rotateX(0deg)";
     cart.style.opacity = "1";
+    cart.addEventListener("mouseover", () => {
+      cart.style.display = "block";
+    });
   }
   function closeCart() {
     const cart = document.querySelector(".cart");
@@ -27,7 +31,7 @@ function Search(props) {
         <i
           className="fa fa-shopping-bag"
           onMouseOver={handleCart}
-          onMouseLeave={closeCart}
+          onClick={handleCart}
         ></i>
         <Cart />
       </div>

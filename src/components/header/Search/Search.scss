@@ -23,9 +23,9 @@
         color: $redColor;
       }
     }
-    // &:hover .cart {
-    //   transform: rotateX(0deg);
-    //   opacity: 1;
-    // }
+    &:hover .cart {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
   }
 }

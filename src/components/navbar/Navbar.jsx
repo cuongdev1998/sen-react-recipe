@@ -19,7 +19,7 @@ function Navbar(props) {
         item.style.animation = "";
       } else {
         item.style.animation = `animationItemsNavbar .4s ease forwards ${
-          index / 3 + 0.5
+          index / 3 + 0.3
         }s`;
       }
     });
