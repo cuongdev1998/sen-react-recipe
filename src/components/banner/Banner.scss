@@ -174,3 +174,52 @@
     }
   }
 }
+@media screen and (max-width: 600px) {
+  .banner {
+    height: 300px;
+    margin: auto;
+    background-color: #fff;
+    font-family: "Poppins", sans-serif;
+
+    padding: 3rem;
+    .slick-slider {
+      height: 100%;
+      .slick-prev,
+      .slick-next {
+        z-index: 1;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+      }
+      .slick-prev {
+        &:before {
+          font-size: 2rem;
+        }
+      }
+      .slick-next {
+        &:before {
+          font-size: 2rem;
+        }
+      }
+      .slick-list {
+        .slick-track {
+          .slick-slide {
+            .slide--items {
+              height: 50%;
+              .items-category {
+              }
+              .items-name {
+                font-size: 1.8rem;
+              }
+              .items-description {
+                display: none;
+              }
+              .items-detail {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -36,6 +36,10 @@
 @media screen and (max-width: 650px) {
   .footer__network {
     font-size: 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     &--item {
       margin: 1rem;
       a {

@@ -84,6 +84,10 @@ $sizeImg: calc(100% / 8);
 }
 @media screen and (max-width: 650px) {
   .list-image {
+    height: 15rem;
+    a {
+      font-size: 1.2rem;
+    }
     ul {
       li {
         width: calc(100% / 4);

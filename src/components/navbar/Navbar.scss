@@ -95,6 +95,25 @@
     }
   }
 }
+@media screen and (max-width: 650px) {
+  .topbar {
+  }
+  .navbar {
+    &__login {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      a {
+        width: 100%;
+        text-align: left;
+      }
+      button {
+        display: none;
+      }
+    }
+  }
+}
 .navbar--appear {
   transform: translateX(0%);
 }

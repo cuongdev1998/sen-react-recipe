@@ -11,9 +11,6 @@ function Search(props) {
 
     cart.style.transform = "rotateX(0deg)";
     cart.style.opacity = "1";
-    cart.addEventListener("mouseover", () => {
-      cart.style.display = "block";
-    });
   }
   function closeCart() {
     const cart = document.querySelector(".cart");
@@ -24,7 +21,7 @@ function Search(props) {
   return (
     <div className="header__search">
       <div className="header__search--form">
-        <i className="fa fa-search" onClick={handleSearchForm}></i>
+        <i className="fa fa-search" onClick={handleSearchForm} onTogg></i>
       </div>
 
       <div className="cart-group">

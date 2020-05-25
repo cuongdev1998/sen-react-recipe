@@ -32,3 +32,10 @@ header {
     @include flex(row, space-around, center);
   }
 }
+@media screen and (max-width: 650px) {
+  .header {
+    &__network {
+      display: none;
+    }
+  }
+}

@@ -104,3 +104,30 @@
         }
     }
 }
+@media screen and (max-width: 650px) {
+    .sidebar__article--list--item {
+        height: 13rem;
+        .item-img {
+            width: 40%;
+        }
+        .item-detail {
+            width: 60%;
+            &-category {
+                margin-bottom: 3rem;
+                font-size: 1.5rem;
+            }
+            &-name {
+                font-size: 1.3rem;
+
+                &:hover {
+                    color: $redColor;
+                }
+            }
+            &-chef {
+                @include detail();
+                align-self: flex-start;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

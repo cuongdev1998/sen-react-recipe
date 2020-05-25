@@ -26,6 +26,7 @@
     &:hover .cart {
       transform: rotateX(0deg);
       opacity: 1;
+      display: flex;
     }
   }
 }
