@@ -205,17 +205,20 @@
         .slick-track {
           .slick-slide {
             .slide--items {
-              height: 50%;
+              height: 30%;
               width: 100%;
               .items-category {
+                font-size: 1.8rem;
+                margin-bottom: 0.3rem;
               }
               .items-name {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
               }
               .items-description {
                 display: none;
               }
               .items-detail {
+                display: none;
               }
             }
           }
