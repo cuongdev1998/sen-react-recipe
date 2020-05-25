@@ -29,5 +29,15 @@
 @media screen and (max-width: 1100px) {
   .article {
     width: 100%;
+    &__main {
+      min-height: 600px;
+      padding: 3rem;
+      @include wrapper();
+
+      &--detail {
+        @include detail();
+        font-size: 1.3rem;
+      }
+    }
   }
 }
