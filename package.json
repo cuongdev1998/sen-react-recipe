@@ -1,5 +1,4 @@
 {
-  "homepage": "http://cuongdev1998.github.io/sen-reactjs-recipe",
   "name": "recipe",
   "version": "0.1.0",
   "private": true,
@@ -22,8 +21,6 @@
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -45,7 +42,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0",
     "node-sass": "^4.14.1"
   }
 }
