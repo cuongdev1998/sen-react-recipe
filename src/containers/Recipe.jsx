@@ -11,7 +11,6 @@ function Recipe(props) {
     if (keyFilter) {
       if (keyFilter === "") {
         setFoodList(FoodList);
-        console.log("aa");
       } else {
         const newList = [...FoodList];
         const listFilter = newList.filter((item) =>

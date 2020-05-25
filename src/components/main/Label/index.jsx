@@ -3,7 +3,6 @@ import { FoodList } from "../../../containers/Data";
 import "./Label.scss";
 function Label(props) {
   const [foodList, setFoodList] = useState(FoodList);
-  console.log(foodList);
 
   return (
     <div className="list__food">

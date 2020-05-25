@@ -12,7 +12,6 @@ LogoFooter.defaultProps = {
 
 function LogoFooter(props) {
   const { colorTxt } = props;
-  console.log(colorTxt);
 
   const colorLogo = colorTxt ? { color: colorTxt } : {};
   return (
