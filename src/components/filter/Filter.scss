@@ -34,6 +34,7 @@
 }
 @media screen and (max-width: 650px) {
   .filter {
+    flex: none;
     width: 90%;
     margin: 50px auto;
     input {

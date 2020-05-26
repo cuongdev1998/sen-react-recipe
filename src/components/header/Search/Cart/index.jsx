@@ -28,6 +28,15 @@ function Cart(props) {
       price: 56,
     },
   ]);
+
+  useEffect(() => {
+    const bagIcon = document.querySelector(".fa-shopping-bag");
+    const cart = document.querySelector(".cart");
+
+    bagIcon.addEventListener("click", () => {
+      cart.classList.toggle("cart-appear");
+    });
+  }, []);
   function handleRemove(item) {
     const index = infoCart.findIndex((x) => x.id === item.id);
     if (index < 0) return;
@@ -37,21 +46,6 @@ function Cart(props) {
     newInfo.splice(index, 1);
     setInfoCart(newInfo);
   }
-
-  function closeCart() {
-    const cart = document.querySelector(".cart");
-    cart.style.transform =
-      "perspective(1000px) rotateX(-30deg) rotateY(0deg) rotateZ(0)";
-    cart.style.opacity = "0";
-    // cart.style.display = "none";
-  }
-  useEffect(() => {
-    const bagIcon = document.querySelector(".fa-shopping-bag");
-    const cart = document.querySelector(".cart");
-    bagIcon.addEventListener("click", () => {
-      cart.classList.toggle("cart-appear");
-    });
-  });
 
   return (
     <div className="cart">

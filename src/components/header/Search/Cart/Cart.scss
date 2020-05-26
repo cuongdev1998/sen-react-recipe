@@ -16,11 +16,11 @@
   transform-style: preserve-3d;
 
   opacity: 0;
+  visibility: hidden;
   padding: 10px;
   z-index: 9;
 
   @include flex(column, flex-start, stretch);
-  pointer-events: none;
   border-top: 3px solid $redColor;
   .cart__list {
     height: 80%;
@@ -146,4 +146,5 @@
 .cart-appear {
   transform: rotateX(0deg);
   opacity: 1;
+  visibility: visible;
 }
