@@ -9,24 +9,21 @@
   align-items: center;
   .header__search--form {
     cursor: pointer;
+    margin-right: 0.5rem;
   }
-  .cart-group {
-    font-size: 2.2rem;
-    margin-left: 1rem;
+
+  .fa-shopping-bag {
+    cursor: pointer;
+    transition: all 0.4s ease;
     padding-left: 1rem;
     border-left: solid 1px;
-    // pointer-events: none;
-    .fa-shopping-bag {
-      cursor: pointer;
-      transition: all 0.4s ease;
-      &:hover {
-        color: $redColor;
-      }
+    &:hover {
+      color: $redColor;
     }
-    &:hover .cart {
-      transform: rotateX(0deg);
-      opacity: 1;
-      display: flex;
-    }
+    // &:hover ~ .cart {
+    //   transform: rotateX(0deg);
+    //   opacity: 1;
+    //   display: block;
+    // }
   }
 }

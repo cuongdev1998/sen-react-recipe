@@ -8,10 +8,11 @@ function Search(props) {
   }
   function handleCart() {
     const cart = document.querySelector(".cart");
-
+    // cart.style.display = "flex";
     cart.style.transform = "rotateX(0deg)";
     cart.style.opacity = "1";
   }
+
   function closeCart() {
     const cart = document.querySelector(".cart");
     cart.style.transform =
@@ -21,17 +22,11 @@ function Search(props) {
   return (
     <div className="header__search">
       <div className="header__search--form">
-        <i className="fa fa-search" onClick={handleSearchForm} onTogg></i>
+        <i className="fa fa-search" onClick={handleSearchForm}></i>
       </div>
-
-      <div className="cart-group">
-        <i
-          className="fa fa-shopping-bag"
-          onMouseOver={handleCart}
-          onClick={handleCart}
-        ></i>
-        <Cart />
-      </div>
+      <i className="fa fa-shopping-bag"></i>
+      <Cart />
+      <div className="cart-group"></div>
     </div>
   );
 }

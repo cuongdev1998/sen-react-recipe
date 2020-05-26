@@ -26,7 +26,8 @@ function App() {
     });
   });
   function backToTop() {
-    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; //chrome, firefox
   }
   return (
     <div className="App">

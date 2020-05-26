@@ -18,7 +18,12 @@ function SearchForm(props) {
         <i className="fa fa-times"></i>
       </button>
       <div className="input-search">
-        <input type="text" value={values} onChange={handleValue} />
+        <input
+          type="text"
+          value={values}
+          onChange={handleValue}
+          placeholder="Search recipes.."
+        />
         <button className="submit-search">
           <i className="fa fa-search"></i>
         </button>
