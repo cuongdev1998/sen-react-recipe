@@ -32,3 +32,18 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 650px) {
+  .filter {
+    width: 90%;
+    margin: 50px auto;
+    input {
+      height: 5rem;
+    }
+    button {
+      height: 5rem;
+      width: 5rem;
+
+      font-size: 2rem;
+    }
+  }
+}
