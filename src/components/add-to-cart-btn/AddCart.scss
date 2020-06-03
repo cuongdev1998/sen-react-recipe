@@ -1,0 +1,19 @@
+@import "../../scss/variables.scss";
+
+.btn-addToCart {
+    width: 10rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid $redColor;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.4s linear;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    &:hover {
+        background-color: $redColor;
+        border: none;
+        color: #fff;
+    }
+}

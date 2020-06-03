@@ -40,7 +40,7 @@ export const FoodList = [
     id: 4,
     srcImg: "/images/breakfast.jpeg",
     category: "Breakfast",
-    name: "Tomatoes Stuffed with Foie and Chanterelles",
+    name: "Tomatoes Stuffed with Foie and Chanterelles...",
     rating: "9/10",
     time: 15,
     chef: "John Martin",

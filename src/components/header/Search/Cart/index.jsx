@@ -1,34 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Cart.scss";
+import { useSelector, useDispatch } from "react-redux";
+import { removeCart } from "../../../../actions/cart";
 function Cart(props) {
-  const [infoCart, setInfoCart] = useState([
-    {
-      id: 1,
-      name: "Bread",
-      srcImg: "/images/breakfast.jpeg",
-      code: "SK888",
-      quantity: 2,
-      price: 34,
-    },
-
-    {
-      id: 2,
-      name: "Juice Tomato",
-      srcImg: "/images/juice.jpeg",
-      code: "SK444",
-      quantity: 1,
-      price: 34,
-    },
-    {
-      id: 3,
-      name: "Pizza",
-      srcImg: "/images/desert.jpeg",
-      code: "SK222",
-      quantity: 3,
-      price: 56,
-    },
-  ]);
-
+  const listCart = useSelector((state) => state.cart.list);
+  const dispatch = useDispatch();
   useEffect(() => {
     const bagIcon = document.querySelector(".fa-shopping-bag");
     const cart = document.querySelector(".cart");
@@ -37,20 +13,14 @@ function Cart(props) {
       cart.classList.toggle("cart-appear");
     });
   }, []);
-  function handleRemove(item) {
-    const index = infoCart.findIndex((x) => x.id === item.id);
-    if (index < 0) return;
-
-    const newInfo = [...infoCart];
-
-    newInfo.splice(index, 1);
-    setInfoCart(newInfo);
+  function handleRemove(id) {
+    dispatch(removeCart(id));
   }
 
   return (
     <div className="cart">
       <div className="cart__list">
-        {infoCart.map((item) => (
+        {listCart.map((item) => (
           <div className="cart__item" key={item.id}>
             <div className="cart__item--image">
               <img src={item.srcImg} alt="" />
@@ -60,11 +30,14 @@ function Cart(props) {
               <p>{item.name}</p>
               <p className="sku">Code: {item.code}</p>
             </div>
-            <div className="cart__item--qty">x{item.quantity} </div>
-            <div className="cart__item--price">
-              ${item.price * item.quantity}{" "}
-            </div>
-            <i className="fa fa-trash" onClick={() => handleRemove(item)}></i>
+            <div className="cart__item--qty">x{item.qty} </div>
+            {/* <div className="cart__item--price">
+              ${item.price * item.qty}{" "}
+            </div> */}
+            <i
+              className="fa fa-trash"
+              onClick={() => handleRemove(item.id)}
+            ></i>
           </div>
         ))}
       </div>

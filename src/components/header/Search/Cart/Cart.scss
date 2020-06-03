@@ -46,6 +46,15 @@
         line-height: 1.6rem;
         cursor: pointer;
         transition: all 0.3s ease;
+
+        p {
+          &:first-child {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1.4rem;
+          }
+        }
         &:hover {
           color: $redColor;
         }

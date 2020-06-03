@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Items.scss";
 import { FoodList } from "../../../../containers/Data.js";
+import AddCartButton from "../../../add-to-cart-btn";
 function Items(props) {
   const [foodList, setFoodList] = useState(FoodList);
   return (
@@ -33,6 +34,8 @@ function Items(props) {
                   <i className="fa fa-heart"></i> 0{item.heart} Likes
                 </a>
               </p>
+
+              <AddCartButton data={item} />
             </div>
           );
         }
