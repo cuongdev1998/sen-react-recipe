@@ -2,7 +2,7 @@ import React from "react";
 import "./Logo.scss";
 function Logo(props) {
   return (
-    <a className="header__logo" href="#">
+    <a className="header__logo" href="/">
       <i className="fa fa-cutlery"></i>
       <p>
         SeN <br />

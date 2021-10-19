@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { FoodList } from "../../../containers/Data";
 import "./Label.scss";
 function Label(props) {
-  const [foodList, setFoodList] = useState(FoodList);
+  const [foodList] = useState(FoodList);
 
   return (
     <div className="list__food">
       {foodList.map(function (item, index) {
         if (index >= 3) {
-          return;
+          return (<></>)
         } else {
           return (
             <div className="list__food--items" key={item.id}>
@@ -21,13 +21,13 @@ function Label(props) {
               <h5 className="list__food--items--name">{item.name}</h5>
 
               <p className="list__food--items--detail">
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-clock"></i> {item.time} mins
                 </a>
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-user"></i> {item.chef}
                 </a>
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-heart"></i> 0{item.heart} Likes
                 </a>
               </p>

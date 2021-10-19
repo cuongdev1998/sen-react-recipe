@@ -24,13 +24,13 @@ export default class Banner extends React.Component {
                 quis sit blanditiis impedit quam?
               </p>
               <p className="items-detail">
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-clock"></i> 15 Mins
                 </a>
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-user"></i> By Join Martin
                 </a>
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-heart"></i> 02 Likes
                 </a>
               </p>
@@ -46,13 +46,13 @@ export default class Banner extends React.Component {
                 quis sit blanditiis impedit quam?
               </p>
               <p className="items-detail">
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-clock"></i> 15 Mins
                 </a>
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-user"></i> By Join Martin
                 </a>
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-heart"></i> 02 Likes
                 </a>
               </p>
@@ -68,13 +68,13 @@ export default class Banner extends React.Component {
                 quis sit blanditiis impedit quam?
               </p>
               <p className="items-detail">
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-clock"></i> 15 Mins
                 </a>
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-user"></i> By Join Martin
                 </a>
-                <a href="#">
+                <a href="/">
                   <i className="fa fa-heart"></i> 02 Likes
                 </a>
               </p>

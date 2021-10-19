@@ -31,13 +31,13 @@ function RecipeBox(props) {
           <h5 className="recipe__list--item--name">{item.name}</h5>
           <p className="recipe__list--item--description">{item.description}</p>
           <p className="recipe__list--item--detail">
-            <a>
+            <a href="/">
               <i className="fa fa-clock"></i> {item.time}
             </a>
-            <a>
+            <a href="/">
               <i className="fa fa-user"></i>by {item.chef}
             </a>
-            <a>
+            <a href="/">
               <i className="fa fa-heart"></i> 0{item.heart} Likes
             </a>
           </p>

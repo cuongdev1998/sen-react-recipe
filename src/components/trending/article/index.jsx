@@ -21,13 +21,13 @@ function Article(props) {
           life. New homes in particular are subject.
         </p>
         <p className="article__main--detail">
-          <a href="#">
+          <a href="/">
             <i className="fa fa-clock"></i> 15 mins
           </a>
-          <a href="#">
+          <a href="/">
             <i className="fa fa-user">by John</i>
           </a>
-          <a href="#">
+          <a href="/">
             <i className="fa fa-heart"></i> 02 Likes
           </a>
         </p>

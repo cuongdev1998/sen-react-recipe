@@ -15,7 +15,7 @@ function LogoFooter(props) {
 
   const colorLogo = colorTxt ? { color: colorTxt } : {};
   return (
-    <a className="footer__logo" style={colorLogo}>
+    <a href="/" className="footer__logo" style={colorLogo}>
       <i className="fa fa-cutlery"></i>
       <p>
         SeN <br />

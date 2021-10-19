@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FoodList } from "../../containers/Data";
 import "./ListImg.scss";
 function ListImage(props) {
-  const [images, setImages] = useState(FoodList);
+  const [images] = useState(FoodList);
   return (
     <div className="list-image">
       <a className="follow-ig" href="https://instagram.com">
@@ -11,11 +11,11 @@ function ListImage(props) {
       <ul>
         {images.map(function (item, index) {
           if (index >= 8) {
-            return;
+            return (<></>);
           } else {
             return (
               <li key={item.id}>
-                <a>
+                <a href="/">
                   <img src={item.srcImg} alt="" />
                 </a>
               </li>
