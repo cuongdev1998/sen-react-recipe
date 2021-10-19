@@ -26,3 +26,5 @@ function LogoFooter(props) {
 }
 
 export default LogoFooter;
+
+
