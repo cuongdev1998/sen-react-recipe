@@ -5,7 +5,7 @@ function Logo(props) {
     <a className="header__logo" href="/">
       <i className="fa fa-cutlery"></i>
       <p>
-        SeN <br />
+        Cuong <br />
         <span> Discover recipe</span>
       </p>
     </a>
