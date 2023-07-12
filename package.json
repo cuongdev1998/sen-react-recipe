@@ -17,7 +17,7 @@
     "react-owl-carousel": "^2.3.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "react-slick": "^0.26.1",
     "redux": "^4.0.5",
     "slick-carousel": "^1.8.1"
@@ -44,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "node-sass": "^9.0.0"
   }
 }
